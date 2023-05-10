@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 
 app.get('/test',function(req,res){
-    res.end('hello, '+ req.msisdn)
+    console.log(req.query.msisdn)
+    res.end('hello, '+ req.query.msisdn)
 })
 
 const server = app.listen(8081,function () {
