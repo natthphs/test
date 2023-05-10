@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/test',function(req,res){
-    res.end('hello')
+    res.end('hello, '+ req.msisdn)
 })
 
 const server = app.listen(8081,function () {
